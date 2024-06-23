@@ -1,0 +1,29 @@
+﻿<Window x:Class="MediaLibraryApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Media Library" Height="400" Width="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <ListView x:Name="ItemsListView" Grid.Row="0" Margin="10" ItemsSource="{Binding Items}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Tytuł" DisplayMemberBinding="{Binding Title}" Width="120"/>
+                    <GridViewColumn Header="Reżyser/Autor" DisplayMemberBinding="{Binding Creator}" Width="120"/>
+                    <GridViewColumn Header="Studio/Wydawca" DisplayMemberBinding="{Binding Publisher}" Width="120"/>
+                    <GridViewColumn Header="Nośnik" DisplayMemberBinding="{Binding MediaType}" Width="100"/>
+                    <GridViewColumn Header="Data Wydania" DisplayMemberBinding="{Binding ReleaseDate, StringFormat={}{0:dd-MM-yyyy}}" Width="100"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center" Margin="10">
+            <Button Content="Dodaj" Click="AddButton_Click" Margin="5"/>
+            <Button Content="Edytuj" Click="EditButton_Click" Margin="5"/>
+            <Button Content="Usuń" Click="DeleteButton_Click" Margin="5"/>
+            <Button Content="Importuj" Click="ImportButton_Click" Margin="5"/>
+            <Button Content="Eksportuj" Click="ExportButton_Click" Margin="5"/>
+        </StackPanel>
+    </Grid>
+</Window>

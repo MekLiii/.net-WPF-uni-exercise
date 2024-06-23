@@ -1,0 +1,30 @@
+﻿<VehicleCatalog>
+    <Categories>
+        <Category Name="Samochody osobowe">
+            <Description>Różne rodzaje samochodów osobowych.</Description>
+            <Subcategories>
+                <Subcategory Name="Toyota">
+                    <Description>Japoński producent samochodów.</Description>
+                    <ParentCompany>Toyota Motor Corporation</ParentCompany>
+                    <Founded>1937</Founded>
+                    <CountriesOfProduction>Japonia, USA, Europa</CountriesOfProduction>
+                    <Models>
+                        <Model Name="Corolla" Year="1966" EngineCapacity="1.8L" DriveType="FWD"/>
+                        <Model Name="Camry" Year="1982" EngineCapacity="2.5L" DriveType="FWD"/>
+                    </Models>
+                </Subcategory>
+                <Subcategory Name="BMW">
+                    <Description>Niemiecki producent samochodów luksusowych.</Description>
+                    <ParentCompany>Bayerische Motoren Werke AG</ParentCompany>
+                    <Founded>1916</Founded>
+                    <CountriesOfProduction>Niemcy, USA, Chiny</CountriesOfProduction>
+                    <Models>
+                        <Model Name="3 Series" Year="1975" EngineCapacity="2.0L" DriveType="RWD"/>
+                        <Model Name="X5" Year="1999" EngineCapacity="3.0L" DriveType="AWD"/>
+                    </Models>
+                </Subcategory>
+            </Subcategories>
+        </Category>
+        <!-- Additional categories can be added here -->
+    </Categories>
+</VehicleCatalog>
